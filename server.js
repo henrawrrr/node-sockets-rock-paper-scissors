@@ -12,12 +12,6 @@ function createServer(rootDir) {
     });
 
     let clients = {};
-    let broadcastClients = function() {
-        io.emit("clear");
-        for (let id in clients) {
-            io.emit("message", clients[id]);
-        }
-    }
 
     let gameIdCounter = 0;
     let createGame = function(clientAId, clientBId) {
