@@ -151,7 +151,7 @@ function createServer(rootDir) {
             otherClient.game = null;
             otherClient.socket.emit("resetGame");
         }
-        delete cli;ents[clientId];
+        delete clients[clientId];
     }
 
     io.on("connection", function(socket) {
